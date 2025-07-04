@@ -1,2 +1,2 @@
 # curso-terraform
-Hands-on do curso de Terraforn
+Hands-on do curso de Terraform
