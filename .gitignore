@@ -1,1 +1,8 @@
-.terraform/
+# Ignora tudo
+*
+
+# Mas inclui arquivos .tf
+!*.tf
+
+# Você pode querer incluir o próprio .gitignore também
+!.gitignore
