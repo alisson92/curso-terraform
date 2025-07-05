@@ -1,8 +1,29 @@
-# Ignora tudo
-*
+# Arquivos de estado do Terraform e backups
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
 
-# Mas inclui arquivos .tf
-!*.tf
+# Diretório de cache do Terraform (módulos, plugins)
+.terraform/
 
-# Você pode querer incluir o próprio .gitignore também
-!.gitignore
+# Logs de crash do Terraform
+crash.log
+
+# Arquivos de variáveis sensíveis (opcional: se você os armazena localmente)
+# Para dados sensíveis, considere usar Vault ou variáveis de ambiente
+# *.tfvars
+# *.tfvars.json
+
+# Logs de debug (se gerados)
+*.log
+*.out
+
+# Arquivos temporários e de sistema operacional
+*.tmp
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Diretórios e arquivos específicos de IDEs (opcionais, mas boas práticas)
+.vscode/    # Visual Studio Code
+.idea/      # IntelliJ / WebStorm
+*.iml       # IntelliJ module files
