@@ -4,8 +4,8 @@
 .terraform.lock.hcl
 
 # Chaves SHH
-*-key
-*.pub
+-key
+.pub
 
 # Diretório de cache do Terraform (módulos, plugins)
 .terraform/
