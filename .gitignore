@@ -10,9 +10,9 @@
 crash.log
 
 # Arquivos de variáveis sensíveis (opcional: se você os armazena localmente)
+*.tfvars
+*.tfvars.json
 # Para dados sensíveis, considere usar Vault ou variáveis de ambiente
-# *.tfvars
-# *.tfvars.json
 
 # Logs de debug (se gerados)
 *.log
