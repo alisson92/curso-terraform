@@ -3,6 +3,9 @@
 *.tfstate.*
 .terraform.lock.hcl
 
+# Chaves SHH
+*key*
+
 # Diretório de cache do Terraform (módulos, plugins)
 .terraform/
 
