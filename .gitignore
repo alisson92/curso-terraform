@@ -3,9 +3,13 @@
 *.tfstate.*
 .terraform.lock.hcl
 
-# Chaves SHH
-aws-key
-aws-key.pub
+# Ignora extensões comuns de chaves
+*.pem
+*.key
+
+# Ignora qualquer chave privada com sufixo -key ou termina em .pub
+*-key
+*-key.pub
 
 # Diretório de cache do Terraform (módulos, plugins)
 .terraform/
