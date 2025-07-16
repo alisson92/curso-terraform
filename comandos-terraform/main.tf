@@ -8,10 +8,11 @@ terraform {
     }
   }
 
-  backend "s3" {
-    bucket = "alissonlima-remote-state"
-    key    = "commands/terraform.tfstate"
-    region = "eu-central-1"
+  backend "azurerm" {
+    resource_group_name  = "rg-terraform-state"
+    storage_account_name = "alissonterraformstate"
+    container_name       = "remote-state"
+    key                  = "comandos/terraform.tfstate"
   }
 }
 
