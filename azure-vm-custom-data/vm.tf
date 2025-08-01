@@ -40,7 +40,8 @@ resource "azurerm_linux_virtual_machine" "vm" {
   location              = var.location
   size                  = "Standard_B1s"
   admin_username        = "terraform"
-  network_interface_ids = [azurerm_network_interface.network_interface.id,]
+  network_interface_ids = [azurerm_network_interface.network_interface.id, ]
+  custom_data           = base64encode(file("./docs/docker.sh"))
 
   admin_ssh_key {
     username   = "terraform"
