@@ -12,7 +12,7 @@ terraform {
     resource_group_name  = "rg-terraform-state"
     storage_account_name = "alissonterraformstate"
     container_name       = "remote-state"
-    key                  = "azure-vm/terraform.tfstate"
+    key                  = "azure-vm-custom-data/terraform.tfstate"
   }
 }
 
