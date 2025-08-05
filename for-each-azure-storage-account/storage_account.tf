@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "resource_group" {
 }
 
 resource "azurerm_storage_account" "storage_account" {
-  for_each = var.azurerm_resource_group.resource_group
+  for_each = azurerm_resource_group.resource_group
 
   name                     = "alissonlima${each.key}"
   resource_group_name      = each.value.name
@@ -20,7 +20,9 @@ resource "azurerm_storage_account" "storage_account" {
 }
 
 resource "azurerm_storage_container" "storage_container" {
-  name               = ""
-  storage_account_id = azurerm_storage_account.storage_account.id
+  for_each = azurerm_storage_account.storage_account
+
+  name               = "imagens-${each.key}"
+  storage_account_name = each.value.name
 }
 

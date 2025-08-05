@@ -1,10 +1,10 @@
 variable "location" {
   description = "Região onde os recursos serão criados na Azure"
   type        = map(string)
-  default     = {
-    "europa"  = "West Europe",
-    "eua"  = "East US",
-    "asia" = "Japan East",
+  default = {
+    "europa" = "West Europe",
+    "eua"    = "East US",
+    "asia"   = "Japan East",
     "brasil" = "Brazil South"
   }
 }
